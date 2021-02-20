@@ -1,0 +1,55 @@
+[tool.poetry]
+name = "urlparselib"
+version = "0.0.1"
+description = "urllib.parse extensions"
+authors = ["Michele Cardone <michele.cardone82@gmail.com>"]
+license = "MIT"
+readme = "README.rst"
+homepage = "https://github.com/wandering-tales/urlparselib"
+repository = "https://github.com/wandering-tales/urlparselib"
+documentation = "https://urlparselib.readthedocs.io"
+classifiers = [
+    'Development Status :: 3 - Alpha',
+    'Intended Audience :: Developers',
+    'Topic :: Software Development :: Libraries',
+    'Topic :: Software Development :: Libraries :: Python Modules',
+    'License :: OSI Approved :: MIT License',
+    'Programming Language :: Python :: 2',
+    'Programming Language :: Python :: 2.7',
+    'Programming Language :: Python :: 3',
+    'Programming Language :: Python :: 3.6',
+    'Programming Language :: Python :: 3.7',
+    'Programming Language :: Python :: 3.8',
+    'Programming Language :: Python :: 3.9',
+]
+
+[tool.poetry.urls]
+Changelog = "https://github.com/wandering-tales/urlparselib/releases"
+
+[tool.poetry.dependencies]
+python = ">=2.7,<3.0 || >3.5,<4"
+six = "^1.15.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^4.6.11"
+coverage = {extras = ["toml"], version = "^5.4"}
+flake8 = "^3.8.4"
+flake8-bandit = "^2.1.2"
+flake8-rst-docstrings = "^0.0.14"
+pep8-naming = "^0.11.1"
+tox = "^3.22.0"
+
+[tool.coverage.paths]
+source = ["src", "*/site-packages"]
+
+[tool.coverage.run]
+branch = true
+source = ["urlparselib"]
+
+[tool.coverage.report]
+show_missing = true
+fail_under = 100
+
+[build-system]
+requires = ["poetry-core>=1.0,<1.2"]
+build-backend = "poetry.core.masonry.api"
